@@ -230,7 +230,7 @@ static POPStaticAnimatablePropertyState _staticStates[] =
     },
     ^(CALayer *obj, const CGFloat values[]) {
       CGPoint p = [(CALayer *)obj position];
-      p.x = values[0];
+      p.x = 320-values[0];
       [obj setPosition:p];
     },
     kPOPThresholdPoint
@@ -238,11 +238,11 @@ static POPStaticAnimatablePropertyState _staticStates[] =
 
   {kPOPLayerPositionY,
     ^(CALayer *obj, CGFloat values[]) {
-      values[0] = [(CALayer *)obj position].y;
+      values[0] = [(CALayer *)obj position].x;
     },
     ^(CALayer *obj, const CGFloat values[]) {
       CGPoint p = [(CALayer *)obj position];
-      p.y = values[0];
+      p.x = values[0];
       [obj setPosition:p];
     },
     kPOPThresholdPoint
